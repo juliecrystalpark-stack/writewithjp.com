@@ -55,26 +55,18 @@ body::before {
 
 /* ── NAV ── */
 nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 200;
-  background: var(--white);
-  border-bottom: 4px solid var(--pink);
-  box-shadow: 0 4px 0 var(--pink-deep);
-  padding: 12px 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: var(--white); border-bottom: 4px solid var(--pink);
+  box-shadow: 0 4px 0 var(--pink-deep); padding: 12px 32px;
+  display: flex; justify-content: space-between; align-items: center;
 }
 .nav-logo { font-family: 'Press Start 2P', monospace; font-size: 10px; color: var(--pink-deep); text-decoration: none; letter-spacing: 0.04em; }
 .nav-logo .accent { color: var(--lilac-deep); }
 .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
 .nav-links a {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 7px; color: var(--muted); text-decoration: none;
-  letter-spacing: 0.06em; padding: 6px 10px;
-  border: 2px solid transparent;
-  transition: color 0.1s, border-color 0.1s, background 0.1s;
+  font-family: 'Press Start 2P', monospace; font-size: 7px; color: var(--muted);
+  text-decoration: none; letter-spacing: 0.06em; padding: 6px 10px;
+  border: 2px solid transparent; transition: color 0.1s, border-color 0.1s, background 0.1s;
 }
 .nav-links a:hover { color: var(--pink-deep); border-color: var(--pink); background: var(--pink-pale); }
 
@@ -109,6 +101,14 @@ section { position: relative; z-index: 2; padding: 96px 24px; }
 .btn-primary   { background: var(--pink-deep); color: var(--white); }
 .btn-secondary { background: var(--white);     color: var(--pink-deep); }
 .btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ── PIXEL SPRITE ICON ── */
+.px-sprite {
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  margin-bottom: 14px;
+}
 
 /* ── HERO ── */
 .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 88px; }
@@ -155,7 +155,6 @@ section { position: relative; z-index: 2; padding: 96px 24px; }
 .svc-card:nth-child(2)::before { background: var(--lilac); }
 .svc-card:nth-child(3)::before { background: var(--mint); }
 .svc-card:nth-child(4)::before { background: var(--yellow); }
-.svc-icon { font-size: 24px; margin-bottom: 12px; display: block; }
 .svc-card h3 { font-family: 'Press Start 2P', monospace; font-size: 8px; color: var(--text); line-height: 1.9; margin-bottom: 10px; }
 .svc-card p  { font-size: 12.5px; color: var(--muted); font-weight: 600; line-height: 1.85; }
 
@@ -172,40 +171,28 @@ section { position: relative; z-index: 2; padding: 96px 24px; }
 .tag-y { background: var(--yellow); color: var(--text); }
 .tag-s { background: var(--sky);    color: var(--text); }
 .tag-o { background: var(--peach);  color: var(--text); }
-
 .case-summary { padding: 24px 28px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; cursor: pointer; user-select: none; }
 .case-summary:hover { background: var(--pink-pale); }
 .case-card h3 { font-family: 'Press Start 2P', monospace; font-size: 10px; color: var(--text); line-height: 1.9; margin-bottom: 10px; }
 .case-overview { font-size: 13px; color: var(--muted); font-weight: 600; line-height: 1.85; max-width: 560px; }
 .case-pills { display: flex; flex-direction: column; gap: 6px; min-width: 140px; flex-shrink: 0; }
 .c-pill { font-family: 'Press Start 2P', monospace; font-size: 5.5px; letter-spacing: 0.04em; border: 2px solid var(--text); padding: 5px 9px; text-align: center; background: var(--cream); color: var(--text); white-space: nowrap; }
-
-.expand-btn {
-  font-family: 'Press Start 2P', monospace; font-size: 7px; color: var(--pink-deep);
-  background: var(--pink-pale); border: 2px solid var(--pink); padding: 6px 14px;
-  cursor: pointer; margin: 0 28px 20px; display: inline-flex; align-items: center; gap: 8px;
-  transition: background 0.1s; width: fit-content;
-}
+.expand-btn { font-family: 'Press Start 2P', monospace; font-size: 7px; color: var(--pink-deep); background: var(--pink-pale); border: 2px solid var(--pink); padding: 6px 14px; cursor: pointer; margin: 0 28px 20px; display: inline-flex; align-items: center; gap: 8px; transition: background 0.1s; width: fit-content; }
 .expand-btn:hover { background: var(--pink); color: var(--white); }
-
 .case-detail { display: none; border-top: 3px solid var(--border); padding: 28px 28px 32px; background: var(--pink-pale); }
 .case-detail.open { display: block; }
 .detail-section { margin-bottom: 24px; }
 .detail-section:last-child { margin-bottom: 0; }
 .detail-label { font-family: 'Press Start 2P', monospace; font-size: 7px; color: var(--pink-deep); letter-spacing: 0.1em; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
 .detail-label::before { content: '▸'; }
-.detail-text { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.9; margin-bottom: 10px; }
 .detail-list { list-style: none; padding: 0; }
 .detail-list li { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.85; padding: 6px 0 6px 20px; position: relative; border-bottom: 1px dashed var(--border); }
 .detail-list li:last-child { border-bottom: none; }
 .detail-list li::before { content: '✦'; color: var(--pink-deep); position: absolute; left: 0; font-size: 10px; top: 8px; }
 .reflection-box { background: var(--white); border: 2px solid var(--border); border-left: 4px solid var(--pink-deep); padding: 16px 20px; margin-top: 8px; font-size: 13px; font-weight: 600; color: var(--muted); line-height: 1.9; font-style: italic; }
-
 .nda-badge { display: inline-flex; align-items: center; gap: 6px; font-family: 'Press Start 2P', monospace; font-size: 6px; background: var(--lilac-pale); border: 2px solid var(--lilac); color: var(--lilac-deep); padding: 4px 10px; margin-bottom: 14px; letter-spacing: 0.04em; }
-
 .case-footer { border-top: 3px solid var(--text); padding: 12px 28px; display: flex; align-items: center; justify-content: space-between; background: var(--pink-pale); }
 .case-footer-note { font-family: 'Press Start 2P', monospace; font-size: 6px; color: var(--muted); }
-.coming-soon { font-family: 'Press Start 2P', monospace; font-size: 6px; border: 2px solid var(--text); background: var(--yellow); color: var(--text); padding: 5px 10px; animation: blink-soft 2s step-end infinite; }
 @keyframes blink-soft { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
 
 /* ── AHH ── */
@@ -230,7 +217,7 @@ section { position: relative; z-index: 2; padding: 96px 24px; }
 .fact-box-top-title { font-family: 'Press Start 2P', monospace; font-size: 7px; color: var(--muted); letter-spacing: 0.06em; }
 .fact-row { display: flex; align-items: flex-start; gap: 12px; padding: 14px 18px; border-bottom: 2px solid var(--border); font-size: 12.5px; font-weight: 600; color: var(--text); line-height: 1.7; }
 .fact-row:last-child { border-bottom: none; }
-.fact-icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+.fact-sprite { flex-shrink: 0; margin-top: 2px; image-rendering: pixelated; }
 
 /* ── CONTACT ── */
 .contact-center { max-width: 560px; margin: 0 auto; text-align: center; }
@@ -288,16 +275,11 @@ footer .heart { color: var(--pink-deep); }
     <div class="hero-grid">
       <div>
         <div class="hero-badge">✦ UX WRITING FOR MOBILE GAMES ✦</div>
-        <h1>
-          words that<br>
-          <span class="c-pink">hook players</span><br>
-          &amp; keep them<br>
-          <span class="c-lilac">coming back.</span>
-        </h1>
+        <h1>words that<br><span class="c-pink">hook players</span><br>&amp; keep them<br><span class="c-lilac">coming back.</span></h1>
         <p class="hero-sub">Hi! I'm Julie — a freelance UX writer specializing in mobile games. I write copy that feels native to your game, moves players forward, and actually sounds like a human wrote it.</p>
         <div class="btn-row">
           <a href="#work" class="btn btn-primary">SEE MY WORK ✦</a>
-          <a href="#contact" class="btn btn-secondary">LET'S TALK 💌</a>
+          <a href="#contact" class="btn btn-secondary">LET'S TALK ✦</a>
         </div>
       </div>
       <div class="hero-sidebar">
@@ -321,10 +303,7 @@ footer .heart { color: var(--pink-deep); }
           <span class="skill-chip chip-mint">Push Notifs</span>
           <span class="skill-chip chip-yellow">Error States</span>
           <div class="sidebar-divider"></div>
-          <div class="sidebar-status">
-            <div class="status-dot"></div>
-            OPEN FOR PROJECTS
-          </div>
+          <div class="sidebar-status"><div class="status-dot"></div>OPEN FOR PROJECTS</div>
         </div>
       </div>
     </div>
@@ -340,22 +319,22 @@ footer .heart { color: var(--pink-deep); }
     <p class="px-sub">From the first tutorial tap to the thousandth push notification — words that keep players happy to be there.</p>
     <div class="services-grid">
       <div class="svc-card reveal">
-        <span class="svc-icon">🌸</span>
+        <canvas class="px-sprite" id="svc1" width="32" height="32" style="width:48px;height:48px;"></canvas>
         <h3>ONBOARDING FLOWS</h3>
         <p>First sessions that teach without lecturing. Players learn by doing — and stay because it felt good from the start.</p>
       </div>
       <div class="svc-card reveal">
-        <span class="svc-icon">✏️</span>
+        <canvas class="px-sprite" id="svc2" width="32" height="32" style="width:48px;height:48px;"></canvas>
         <h3>UI STRINGS & MICROCOPY</h3>
         <p>Buttons, tooltips, error states, empty states. Every line on-brand, clear, and cut to the bone.</p>
       </div>
       <div class="svc-card reveal">
-        <span class="svc-icon">📖</span>
+        <canvas class="px-sprite" id="svc3" width="32" height="32" style="width:48px;height:48px;"></canvas>
         <h3>STYLE GUIDES & VOICE</h3>
         <p>Your game's voice, documented and ready to scale. So every writer sounds like the same character.</p>
       </div>
       <div class="svc-card reveal">
-        <span class="svc-icon">🌏</span>
+        <canvas class="px-sprite" id="svc4" width="32" height="32" style="width:48px;height:48px;"></canvas>
         <h3>GAME DIALOGUE & LOCALIZATION</h3>
         <p>Character voices that travel — copy written for Western players, not translated at them.</p>
       </div>
@@ -370,26 +349,17 @@ footer .heart { color: var(--pink-deep); }
     <p class="px-label">SELECTED WORK</p>
     <h2 class="px-title">Games I've written for.</h2>
     <p class="px-sub">Real projects, real problems, real solutions. Click any card to read the full case study.</p>
-
     <div class="case-list">
 
-      <!-- 01 BOBA TALE -->
       <div class="case-card reveal">
-        <div class="case-header">
-          <span class="case-num">01</span>
-          <span class="case-tag tag-p">COZY · ONBOARDING</span>
-        </div>
+        <div class="case-header"><span class="case-num">01</span><span class="case-tag tag-p">COZY · ONBOARDING</span></div>
         <div class="case-summary" onclick="toggleCase(this)">
           <div>
             <h3>Boba Tale —<br>Onboarding Design</h3>
             <p class="case-overview">A cozy shop-management game that launched without onboarding — causing early drop-off before players could fall in love with it. I designed a structured first-session experience that teaches core mechanics, builds player confidence, and preserves the kawaii tone throughout.</p>
           </div>
           <div class="case-pills">
-            <span class="c-pill">Onboarding Flow</span>
-            <span class="c-pill">Tutorial Microcopy</span>
-            <span class="c-pill">Tone Framework</span>
-            <span class="c-pill">IAP Context</span>
-            <span class="c-pill">Retention Focus</span>
+            <span class="c-pill">Onboarding Flow</span><span class="c-pill">Tutorial Microcopy</span><span class="c-pill">Tone Framework</span><span class="c-pill">IAP Context</span><span class="c-pill">Retention Focus</span>
           </div>
         </div>
         <button class="expand-btn" onclick="toggleCase(this.previousElementSibling)">▶ READ FULL CASE STUDY</button>
@@ -425,29 +395,18 @@ footer .heart { color: var(--pink-deep); }
             <div class="reflection-box">With 27% of negative reviews tied directly to missing first-session guidance, this targeted the game's most documented pain point. Designing the onboarding meant asking what players needed to know, in what order, and how to say it in a voice that felt like Boba Tale — not like documentation. That balance between clarity and charm is where I find the most interesting UX writing problems.</div>
           </div>
         </div>
-        <div class="case-footer">
-          <span class="case-footer-note">📄 Full samples available on request</span>
-          <span class="coming-soon">SAMPLE COMING SOON</span>
-        </div>
+        <div class="case-footer"><span class="case-footer-note">✦ Samples available on request — just ask</span></div>
       </div>
 
-      <!-- 02 TWO DOTS -->
       <div class="case-card reveal">
-        <div class="case-header">
-          <span class="case-num">02</span>
-          <span class="case-tag tag-m">PUZZLE · IAP COPY</span>
-        </div>
+        <div class="case-header"><span class="case-num">02</span><span class="case-tag tag-m">PUZZLE · IAP COPY</span></div>
         <div class="case-summary" onclick="toggleCase(this)">
           <div>
             <h3>Two Dots —<br>IAP Messaging Redesign</h3>
             <p class="case-overview">A minimalist puzzle game with underperforming IAP CTAs — not because players didn't want to spend, but because the copy wasn't meeting them at the right moment with the right reason. I redesigned purchase messaging and placement to increase conversion without damaging the brand's calm identity.</p>
           </div>
           <div class="case-pills">
-            <span class="c-pill">IAP Copy</span>
-            <span class="c-pill">CTA Strategy</span>
-            <span class="c-pill">Behavior Mapping</span>
-            <span class="c-pill">Brand Voice</span>
-            <span class="c-pill">Conversion Focus</span>
+            <span class="c-pill">IAP Copy</span><span class="c-pill">CTA Strategy</span><span class="c-pill">Behavior Mapping</span><span class="c-pill">Brand Voice</span><span class="c-pill">Conversion Focus</span>
           </div>
         </div>
         <button class="expand-btn" onclick="toggleCase(this.previousElementSibling)">▶ READ FULL CASE STUDY</button>
@@ -465,7 +424,7 @@ footer .heart { color: var(--pink-deep); }
             <ul class="detail-list">
               <li>Mapped high purchase-intent moments — post-failure, boost depletion, near-completion — and repositioned CTAs to appear when a player already has a reason to consider spending.</li>
               <li>Rebuilt IAP copy around three questions every player silently asks: What is this? Why do I need it right now? How long do I have?</li>
-              <li>Proposed text-led CTAs over button-heavy layouts, with contextual appearance tied to gameplay state — purchase moments feel like a natural continuation, not a commercial break.</li>
+              <li>Proposed text-led CTAs over button-heavy layouts — purchase moments feel like a natural continuation, not a commercial break.</li>
             </ul>
           </div>
           <div class="detail-section">
@@ -482,29 +441,18 @@ footer .heart { color: var(--pink-deep); }
             <div class="reflection-box">Monetization copy is where UX writing and business strategy overlap most directly. Done poorly, it erodes trust. Done well, it gives players a reason to invest in their own experience at exactly the moment they're already thinking about it. The constraint I kept returning to: if a player feels manipulated, the copy failed — regardless of whether they converted.</div>
           </div>
         </div>
-        <div class="case-footer">
-          <span class="case-footer-note">📄 Full samples available on request</span>
-          <span class="coming-soon">SAMPLE COMING SOON</span>
-        </div>
+        <div class="case-footer"><span class="case-footer-note">✦ Samples available on request — just ask</span></div>
       </div>
 
-      <!-- 03 OKAY? -->
       <div class="case-card reveal">
-        <div class="case-header">
-          <span class="case-num">03</span>
-          <span class="case-tag tag-l">MINIMALIST · HINT SYSTEM</span>
-        </div>
+        <div class="case-header"><span class="case-num">03</span><span class="case-tag tag-l">MINIMALIST · HINT SYSTEM</span></div>
         <div class="case-summary" onclick="toggleCase(this)">
           <div>
             <h3>Okay? —<br>Hint System Design</h3>
             <p class="case-overview">A minimalist puzzle game where silence was the aesthetic — but players were rage-quitting before reaching its deeper experience. I designed a light-touch hint system that reduces frustration loops while preserving player autonomy and the game's quiet identity.</p>
           </div>
           <div class="case-pills">
-            <span class="c-pill">Hint System</span>
-            <span class="c-pill">Retention UX</span>
-            <span class="c-pill">Behavior Triggers</span>
-            <span class="c-pill">Minimalist Copy</span>
-            <span class="c-pill">Flow Preservation</span>
+            <span class="c-pill">Hint System</span><span class="c-pill">Retention UX</span><span class="c-pill">Behavior Triggers</span><span class="c-pill">Minimalist Copy</span><span class="c-pill">Flow Preservation</span>
           </div>
         </div>
         <button class="expand-btn" onclick="toggleCase(this.previousElementSibling)">▶ READ FULL CASE STUDY</button>
@@ -514,13 +462,13 @@ footer .heart { color: var(--pink-deep); }
             <ul class="detail-list">
               <li>Frustration loops — five or more failed attempts on a single level sent players toward the exit, not the next try.</li>
               <li>No safety net — with no optional guidance, players who hit a wall had nowhere to go and most didn't wait around to find one.</li>
-              <li>A constraint that couldn't be ignored — any hint system that felt loud or visually heavy would contradict everything the game stood for. The solution had to be as quiet as the game itself.</li>
+              <li>A constraint that couldn't be ignored — any hint system that felt loud or visually heavy would contradict everything the game stood for.</li>
             </ul>
           </div>
           <div class="detail-section">
             <p class="detail-label">MY APPROACH</p>
             <ul class="detail-list">
-              <li>Designed around frustration thresholds rather than timers — a 5-failure trigger surfaces a hint only when a player actually needs it, keeping the experience clean for players who don't.</li>
+              <li>Designed around frustration thresholds — a 5-failure trigger surfaces a hint only when a player actually needs it, keeping the experience clean for players who don't.</li>
               <li>Designed a low-opacity, text-only overlay — no animation, no sound, no UI clutter. Players tap to dismiss; copy disappears the moment play resumes.</li>
               <li>Every word chosen to feel like a quiet nudge from the game itself, not a help menu interrupting it.</li>
             </ul>
@@ -539,29 +487,18 @@ footer .heart { color: var(--pink-deep); }
             <div class="reflection-box">UX writing in games is often treated as decoration. This project is a case for something different: writing as emotional architecture. The right words, at the right moment, can regulate frustration, rebuild confidence, and keep a player in the experience long enough to care about it. A hint that preserves immersion is more valuable than a hint that's merely correct.</div>
           </div>
         </div>
-        <div class="case-footer">
-          <span class="case-footer-note">📄 Full samples available on request</span>
-          <span class="coming-soon">SAMPLE COMING SOON</span>
-        </div>
+        <div class="case-footer"><span class="case-footer-note">✦ Samples available on request — just ask</span></div>
       </div>
 
-      <!-- 04 FIREBALL WIZARD -->
       <div class="case-card reveal">
-        <div class="case-header">
-          <span class="case-num">04</span>
-          <span class="case-tag tag-y">ADVENTURE · LOCALIZATION</span>
-        </div>
+        <div class="case-header"><span class="case-num">04</span><span class="case-tag tag-y">ADVENTURE · LOCALIZATION</span></div>
         <div class="case-summary" onclick="toggleCase(this)">
           <div>
             <h3>Fireball Wizard —<br>Onboarding & Shop Copy</h3>
             <p class="case-overview">A pixel-art mobile adventure where players were getting lost before they ever felt the magic. Tutorial language that didn't travel globally and a shop nobody could navigate were breaking the early experience. I rewrote both to guide players clearly — without making it feel like guidance.</p>
           </div>
           <div class="case-pills">
-            <span class="c-pill">Tutorial Copy</span>
-            <span class="c-pill">Shop Navigation</span>
-            <span class="c-pill">Localization UX</span>
-            <span class="c-pill">Narrative Cues</span>
-            <span class="c-pill">Tone Alignment</span>
+            <span class="c-pill">Tutorial Copy</span><span class="c-pill">Shop Navigation</span><span class="c-pill">Localization UX</span><span class="c-pill">Narrative Cues</span><span class="c-pill">Tone Alignment</span>
           </div>
         </div>
         <button class="expand-btn" onclick="toggleCase(this.previousElementSibling)">▶ READ FULL CASE STUDY</button>
@@ -569,8 +506,8 @@ footer .heart { color: var(--pink-deep); }
           <div class="detail-section">
             <p class="detail-label">THE CHALLENGE</p>
             <ul class="detail-list">
-              <li>Tutorial language that didn't travel — literal phrasing disrupted flow and left global players guessing at objectives right when they should be getting hooked.</li>
-              <li>A shop players couldn't figure out — they didn't know where to find it, what to do there, or why it mattered. Without that clarity, progression stalled and engagement dropped early.</li>
+              <li>Tutorial language that didn't travel — literal phrasing left global players guessing at objectives right when they should be getting hooked.</li>
+              <li>A shop players couldn't figure out — they didn't know where to find it, what to do there, or why it mattered. Without that clarity, progression stalled early.</li>
             </ul>
           </div>
           <div class="detail-section">
@@ -592,33 +529,22 @@ footer .heart { color: var(--pink-deep); }
           </div>
           <div class="detail-section">
             <p class="detail-label">REFLECTION</p>
-            <div class="reflection-box">I built this project independently — no client brief, no guardrails. Just a friction point I spotted and a question I wanted to answer: what does good UX writing actually look like inside a fantasy game? By treating localization and navigation as part of the world-building rather than a separate layer, the copy becomes something players experience — not something they have to work through.</div>
+            <div class="reflection-box">I built this project independently — no client brief, no guardrails. By treating localization and navigation as part of the world-building rather than a separate layer, the copy becomes something players experience — not something they have to work through.</div>
           </div>
         </div>
-        <div class="case-footer">
-          <span class="case-footer-note">📄 Full samples available on request</span>
-          <span class="coming-soon">SAMPLE COMING SOON</span>
-        </div>
+        <div class="case-footer"><span class="case-footer-note">✦ Samples available on request — just ask</span></div>
       </div>
 
-      <!-- 05 NDA STYLE GUIDE -->
       <div class="case-card reveal">
-        <div class="case-header">
-          <span class="case-num">05</span>
-          <span class="case-tag tag-s">SOCIAL CASINO · STYLE GUIDE</span>
-        </div>
+        <div class="case-header"><span class="case-num">05</span><span class="case-tag tag-s">SOCIAL CASINO · STYLE GUIDE</span></div>
         <div class="case-summary" onclick="toggleCase(this)">
           <div>
-            <div class="nda-badge">🔒 NDA — STUDIO NAME CONFIDENTIAL</div>
+            <div class="nda-badge">&#128274; NDA — STUDIO NAME CONFIDENTIAL</div>
             <h3>Mobile Game Studio —<br>Complete Brand Voice System</h3>
-            <p class="case-overview">A major mobile studio needed a scalable writing system that any writer could pick up and use without needing to guess at tone, format, or voice. I built it from scratch — a full brand voice guide, content formulas for every surface, a grammar reference, an accessibility framework, and a QA checklist.</p>
+            <p class="case-overview">A major mobile studio needed a scalable writing system any writer could pick up without guessing at tone, format, or voice. I built it from scratch — a full brand voice guide, content formulas for every surface, a grammar reference, an accessibility framework, and a QA checklist.</p>
           </div>
           <div class="case-pills">
-            <span class="c-pill">Brand Voice Guide</span>
-            <span class="c-pill">Content Formulas</span>
-            <span class="c-pill">Grammar Reference</span>
-            <span class="c-pill">Accessibility</span>
-            <span class="c-pill">QA Checklist</span>
+            <span class="c-pill">Brand Voice Guide</span><span class="c-pill">Content Formulas</span><span class="c-pill">Grammar Reference</span><span class="c-pill">Accessibility</span><span class="c-pill">QA Checklist</span>
           </div>
         </div>
         <button class="expand-btn" onclick="toggleCase(this.previousElementSibling)">▶ READ FULL CASE STUDY</button>
@@ -626,7 +552,7 @@ footer .heart { color: var(--pink-deep); }
           <div class="detail-section">
             <p class="detail-label">WHAT I BUILT</p>
             <ul class="detail-list">
-              <li>A complete brand voice guide with four distinct character personalities and tone-by-player-state frameworks — so writers always know how the game should sound depending on context.</li>
+              <li>A complete brand voice guide with four distinct character personalities and tone-by-player-state frameworks.</li>
               <li>Content formulas for every surface: tutorials, pop-ups, push notifications, game rules, monetization copy, error states, and loading screen tips.</li>
               <li>A grammar and mechanics reference covering capitalization, punctuation, sentence structure, and formatting standards.</li>
               <li>A full accessibility and inclusion section covering screen readers, gender-neutral language, cultural sensitivity, and mental health considerations.</li>
@@ -638,34 +564,23 @@ footer .heart { color: var(--pink-deep); }
             <ul class="detail-list">
               <li>A scalable, team-ready writing system any writer could pick up and use immediately.</li>
               <li>No more guessing at tone, format, or voice — everything documented and defended.</li>
-              <li>A foundation for consistent player experience across every copy touchpoint as the team and game grow.</li>
+              <li>A foundation for consistent player experience across every copy touchpoint as the team grows.</li>
             </ul>
           </div>
         </div>
-        <div class="case-footer">
-          <span class="case-footer-note">🔒 NDA — samples available under NDA</span>
-          <span class="coming-soon">BY REQUEST ONLY</span>
-        </div>
+        <div class="case-footer"><span class="case-footer-note"><div class="case-footer"><span class="case-footer-note">&#128274; Samples available under NDA</span><span class="coming-soon">BY REQUEST ONLY</span></div>#128274; NDA work — samples available on request</span></div>
       </div>
 
-      <!-- 06 NDA DIALOGUE -->
       <div class="case-card reveal">
-        <div class="case-header">
-          <span class="case-num">06</span>
-          <span class="case-tag tag-o">CASUAL · DIALOGUE & LOCALIZATION</span>
-        </div>
+        <div class="case-header"><span class="case-num">06</span><span class="case-tag tag-o">CASUAL · DIALOGUE</span></div>
         <div class="case-summary" onclick="toggleCase(this)">
           <div>
-            <div class="nda-badge">🔒 NDA — STUDIO NAME CONFIDENTIAL</div>
+            <div class="nda-badge">&#128274; NDA — STUDIO NAME CONFIDENTIAL</div>
             <h3>Mobile Game Studio —<br>500+ Lines of Dialogue</h3>
-            <p class="case-overview">A mobile game studio needed their dialogue fully localized for Western markets — with personality, comedic timing, and emotional beats intact across 14 game areas. I rewrote 500+ lines of dialogue while working cross-culturally with a team across a 12-hour time difference.</p>
+            <p class="case-overview">A mobile studio needed their dialogue fully localized for Western markets — with personality, comedic timing, and emotional beats intact across 14 game areas. I rewrote 500+ lines while working cross-culturally with a team across a 12-hour time difference.</p>
           </div>
           <div class="case-pills">
-            <span class="c-pill">Game Dialogue</span>
-            <span class="c-pill">Localization</span>
-            <span class="c-pill">Character Voice</span>
-            <span class="c-pill">Cultural Sensitivity</span>
-            <span class="c-pill">500+ Entries</span>
+            <span class="c-pill">Game Dialogue</span><span class="c-pill">Localization</span><span class="c-pill">Character Voice</span><span class="c-pill">Cultural Sensitivity</span><span class="c-pill">500+ Entries</span>
           </div>
         </div>
         <button class="expand-btn" onclick="toggleCase(this.previousElementSibling)">▶ READ FULL CASE STUDY</button>
@@ -673,8 +588,8 @@ footer .heart { color: var(--pink-deep); }
           <div class="detail-section">
             <p class="detail-label">WHAT I DID</p>
             <ul class="detail-list">
-              <li>Rewrote 500+ lines of dialogue across 14 distinct game areas — maintaining a consistent character voice throughout while adapting energy level to match each moment.</li>
-              <li>Developed a consistent character voice for the main character: warm, enthusiastic, gently funny, and genuinely invested in the player's experience.</li>
+              <li>Rewrote 500+ lines of dialogue across 14 distinct game areas — maintaining consistent character voice while adapting energy level to match each moment.</li>
+              <li>Developed a consistent character voice: warm, enthusiastic, gently funny, and genuinely invested in the player's experience.</li>
               <li>Flagged cultural sensitivity issues in real time and proposed alternatives collaboratively with the client.</li>
               <li>Added personality and comedic timing throughout — character-specific reactions, sarcastic asides, and emotional beats that made the journey feel like a story, not a checklist.</li>
               <li>Maintained tone consistency across 500+ entries — excitement for reveals, warmth for cozy moments, humor for unexpected discoveries.</li>
@@ -689,10 +604,7 @@ footer .heart { color: var(--pink-deep); }
             </ul>
           </div>
         </div>
-        <div class="case-footer">
-          <span class="case-footer-note">🔒 NDA — samples available under NDA</span>
-          <span class="coming-soon">BY REQUEST ONLY</span>
-        </div>
+        <div class="case-footer"><span class="case-footer-note"><div class="case-footer"><span class="case-footer-note">&#128274; Samples available under NDA</span><span class="coming-soon">BY REQUEST ONLY</span></div>#128274; NDA work — samples available on request</span></div>
       </div>
 
     </div>
@@ -709,21 +621,9 @@ footer .heart { color: var(--pink-deep); }
       <h2 class="px-title">The AHH Method.</h2>
       <p style="font-size:13.5px;font-weight:600;color:var(--muted);max-width:480px;line-height:1.9;">My onboarding philosophy — built from writing for real players. Good game copy should do three things, in this order.</p>
       <div class="ahh-grid">
-        <div class="ahh-item reveal">
-          <span class="ahh-letter">A</span>
-          <h4>ACCESSIBLE</h4>
-          <p>No jargon walls. No assuming the player knows what they're doing yet. Copy meets them where they are — without being condescending about it.</p>
-        </div>
-        <div class="ahh-item reveal">
-          <span class="ahh-letter">H</span>
-          <h4>HEY YOU</h4>
-          <p>It speaks to a real person, not a user. Warm, direct, a little specific. The player should feel like someone actually thought about them when they wrote this.</p>
-        </div>
-        <div class="ahh-item reveal">
-          <span class="ahh-letter">H</span>
-          <h4>HELL YA</h4>
-          <p>It builds momentum. Every string leaves the player feeling capable and ready to keep going. Onboarding should be a highlight — not a hoop.</p>
-        </div>
+        <div class="ahh-item reveal"><span class="ahh-letter">A</span><h4>ACCESSIBLE</h4><p>No jargon walls. No assuming the player knows what they're doing yet. Copy meets them where they are — without being condescending about it.</p></div>
+        <div class="ahh-item reveal"><span class="ahh-letter">H</span><h4>HEY YOU</h4><p>It speaks to a real person, not a user. Warm, direct, a little specific. The player should feel like someone actually thought about them when they wrote this.</p></div>
+        <div class="ahh-item reveal"><span class="ahh-letter">H</span><h4>HELL YA</h4><p>It builds momentum. Every string leaves the player feeling capable and ready to keep going. Onboarding should be a highlight — not a hoop.</p></div>
       </div>
     </div>
   </div>
@@ -743,15 +643,13 @@ footer .heart { color: var(--pink-deep); }
         <p>Currently open to project-based work with indie studios and teams who take their words seriously.</p>
       </div>
       <div class="fact-box reveal">
-        <div class="fact-box-top">
-          <p class="fact-box-top-title">A FEW THINGS ABOUT ME</p>
-        </div>
-        <div class="fact-row"><span class="fact-icon">🍁</span><span>Canadian writer, available for remote projects worldwide</span></div>
-        <div class="fact-row"><span class="fact-icon">🎮</span><span>Focused on indie studios & Asian studios targeting English markets</span></div>
-        <div class="fact-row"><span class="fact-icon">🌸</span><span>Former Benefits Analyst — I translate complex into clear for a living</span></div>
-        <div class="fact-row"><span class="fact-icon">✏️</span><span>Creator of the AHH onboarding framework</span></div>
-        <div class="fact-row"><span class="fact-icon">🌏</span><span>Deep interest in Korean game culture & English copy for global studios</span></div>
-        <div class="fact-row"><span class="fact-icon">💌</span><span>Responds within 48 hours — always</span></div>
+        <div class="fact-box-top"><p class="fact-box-top-title">A FEW THINGS ABOUT ME</p></div>
+        <div class="fact-row"><canvas class="fact-sprite" id="fact1" width="16" height="16" style="width:24px;height:24px;"></canvas><span>Canadian writer, available for remote projects worldwide</span></div>
+        <div class="fact-row"><canvas class="fact-sprite" id="fact2" width="16" height="16" style="width:24px;height:24px;"></canvas><span>Focused on indie studios & Asian studios targeting English markets</span></div>
+        <div class="fact-row"><canvas class="fact-sprite" id="fact3" width="16" height="16" style="width:24px;height:24px;"></canvas><span>Former Benefits Analyst — I translate complex into clear for a living</span></div>
+        <div class="fact-row"><canvas class="fact-sprite" id="fact4" width="16" height="16" style="width:24px;height:24px;"></canvas><span>Creator of the AHH onboarding framework</span></div>
+        <div class="fact-row"><canvas class="fact-sprite" id="fact5" width="16" height="16" style="width:24px;height:24px;"></canvas><span>Deep interest in Korean game culture & English copy for global studios</span></div>
+        <div class="fact-row"><canvas class="fact-sprite" id="fact6" width="16" height="16" style="width:24px;height:24px;"></canvas><span>Responds within 48 hours — always</span></div>
       </div>
     </div>
   </div>
@@ -767,19 +665,15 @@ footer .heart { color: var(--pink-deep); }
       <p style="font-size:13.5px;font-weight:600;color:var(--muted);line-height:1.9;text-align:center;">Tell me about your game, what you need, and when.<br>I'll get back to you within 48 hours.</p>
       <div class="contact-window reveal">
         <div class="win-bar">
-          <span class="win-title">💌 NEW MESSAGE</span>
-          <div class="win-btns">
-            <div class="win-btn">_</div>
-            <div class="win-btn">□</div>
-            <div class="win-btn">✕</div>
-          </div>
+          <span class="win-title">NEW MESSAGE</span>
+          <div class="win-btns"><div class="win-btn">_</div><div class="win-btn">□</div><div class="win-btn">✕</div></div>
         </div>
         <div class="win-body">
           <a href="mailto:hello@writewithjp.com" class="contact-email">hello@writewithjp.com</a>
           <p class="contact-note">Prefer to slide into my DMs? That works too ✦</p>
           <div class="social-row">
-            <a href="#" class="soc-btn">💼 LINKEDIN</a>
-            <a href="#" class="soc-btn">📄 DOWNLOAD CV</a>
+            <a href="#" class="soc-btn">LINKEDIN</a>
+            <a href="#" class="soc-btn">DOWNLOAD CV</a>
           </div>
         </div>
       </div>
@@ -787,38 +681,218 @@ footer .heart { color: var(--pink-deep); }
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <p>© 2026 WRITE WITH JP · JULIE PARK · UX WRITING FOR MOBILE GAMES<br>MADE WITH <span class="heart">♥</span> AND TOO MUCH BOBA</p>
 </footer>
 
 <script>
-  function toggleCase(summaryEl) {
-    const card = summaryEl.closest('.case-card');
-    const detail = card.querySelector('.case-detail');
-    const btn = card.querySelector('.expand-btn');
-    const isOpen = detail.classList.contains('open');
-    detail.classList.toggle('open', !isOpen);
-    btn.textContent = isOpen ? '▶ READ FULL CASE STUDY' : '▼ CLOSE CASE STUDY';
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 140) current = s.id; });
-    navLinks.forEach(a => {
-      const active = a.getAttribute('href') === '#' + current;
-      a.style.color = active ? 'var(--pink-deep)' : '';
-      a.style.background = active ? 'var(--pink-pale)' : '';
-      a.style.borderColor = active ? 'var(--pink)' : '';
-    });
+// ── PIXEL ART DRAWING HELPER ──
+function drawSprite(id, pixels, scale) {
+  const c = document.getElementById(id);
+  if (!c) return;
+  const ctx = c.getContext('2d');
+  ctx.imageSmoothingEnabled = false;
+  pixels.forEach(([x, y, color]) => {
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, 1, 1);
   });
+}
+
+// Color palette
+const PK = '#ff6fad'; // pink
+const PK2= '#ffb3d1'; // light pink
+const LI = '#9b6fff'; // lilac
+const MT = '#3ecf99'; // mint
+const YL = '#ffe98a'; // yellow
+const SK = '#4da8d8'; // sky
+const TX = '#3a1f40'; // dark text
+const WH = '#ffffff'; // white
+const CR = '#fff8fd'; // cream
+const OR = '#ff8c42'; // orange
+const RD = '#ff4444'; // red
+
+// SVC1: Pixel door/gate = onboarding (player entering)
+drawSprite('svc1', [
+  [12,2,TX],[13,2,TX],[14,2,TX],[15,2,TX],[16,2,TX],[17,2,TX],[18,2,TX],[19,2,TX],
+  [12,3,TX],[13,3,PK],[14,3,PK],[15,3,PK2],[16,3,PK2],[17,3,PK],[18,3,PK],[19,3,TX],
+  [12,4,TX],[13,4,PK],[14,4,PK],[15,4,PK2],[16,4,PK2],[17,4,PK],[18,4,PK],[19,4,TX],
+  [12,5,TX],[13,5,LI],[14,5,LI],[15,5,WH],[16,5,WH],[17,5,LI],[18,5,LI],[19,5,TX],
+  [12,6,TX],[13,6,LI],[14,6,LI],[15,6,WH],[16,6,WH],[17,6,LI],[18,6,LI],[19,6,TX],
+  [12,7,TX],[19,7,TX],
+  [12,8,TX],[13,8,YL],[14,8,YL],[15,8,YL],[16,8,YL],[17,8,YL],[18,8,YL],[19,8,TX],
+  [12,9,TX],[13,9,YL],[14,9,YL],[15,9,YL],[16,9,YL],[17,9,YL],[18,9,YL],[19,9,TX],
+  [12,10,TX],[19,10,TX],
+  [12,11,TX],[13,11,PK],[14,11,PK],[15,11,PK],[16,11,PK],[17,11,PK],[18,11,PK],[19,11,TX],
+  [12,12,TX],[13,12,PK],[14,12,PK],[15,12,WH],[16,12,WH],[17,12,PK],[18,12,PK],[19,12,TX],
+  [12,13,TX],[13,13,PK],[14,13,PK],[15,13,PK],[16,13,PK],[17,13,PK],[18,13,PK],[19,13,TX],
+  [12,14,TX],[19,14,TX],
+  [11,15,TX],[12,15,TX],[13,15,TX],[14,15,TX],[15,15,TX],[16,15,TX],[17,15,TX],[18,15,TX],[19,15,TX],[20,15,TX],
+  // arrow pointing in
+  [6,9,TX],[7,9,PK],[8,9,PK],[9,9,PK],[10,9,PK],[11,9,TX],
+  [8,7,TX],[9,7,PK],[10,7,TX],
+  [8,11,TX],[9,11,PK],[10,11,TX],
+],[1]);
+
+// SVC2: Pixel pencil = microcopy/UI strings
+drawSprite('svc2', [
+  [15,2,YL],[16,2,YL],
+  [14,3,YL],[15,3,YL],[16,3,YL],[17,3,YL],
+  [13,4,YL],[14,4,PK],[15,4,PK],[16,4,PK],[17,4,YL],[18,4,YL],
+  [12,5,YL],[13,5,PK],[14,5,WH],[15,5,WH],[16,5,PK],[17,5,YL],[18,5,YL],[19,5,YL],
+  [11,6,YL],[12,6,PK],[13,6,WH],[14,6,WH],[15,6,WH],[16,6,PK],[17,6,YL],[18,6,YL],[19,6,YL],[20,6,YL],
+  [10,7,YL],[11,7,PK],[12,7,WH],[13,7,WH],[14,7,WH],[15,7,WH],[16,7,PK],[17,7,YL],[18,7,YL],[19,7,YL],[20,7,YL],[21,7,YL],
+  [9,8,YL],[10,8,PK],[11,8,WH],[12,8,WH],[13,8,WH],[14,8,WH],[15,8,WH],[16,8,PK],[17,8,YL],[18,8,YL],[19,8,YL],[20,8,YL],[21,8,YL],[22,8,YL],
+  [8,9,YL],[9,9,PK],[10,9,WH],[11,9,WH],[12,9,WH],[13,9,WH],[14,9,WH],[15,9,WH],[16,9,PK],[17,9,YL],
+  [7,10,YL],[8,10,PK],[9,10,WH],[10,10,WH],[11,10,WH],[12,10,WH],[13,10,WH],[14,10,WH],[15,10,WH],[16,10,PK],[17,10,YL],
+  [6,11,YL],[7,11,PK],[8,11,WH],[9,11,WH],[10,11,WH],[11,11,WH],[12,11,WH],[13,11,WH],[14,11,WH],[15,11,WH],[16,11,PK],
+  [5,12,YL],[6,12,PK],[7,12,WH],[8,12,WH],[9,12,WH],[10,12,WH],[11,12,WH],[12,12,WH],[13,12,WH],[14,12,WH],[15,12,PK],
+  [4,13,YL],[5,13,PK],[6,13,WH],[7,13,WH],[8,13,WH],[9,13,WH],[10,13,WH],[11,13,WH],[12,13,WH],[13,13,PK],
+  [3,14,OR],[4,14,OR],[5,14,OR],[6,14,OR],[7,14,OR],[8,14,OR],[9,14,OR],[10,14,OR],[11,14,OR],[12,14,OR],
+  [4,15,OR],[5,15,TX],[6,15,TX],[7,15,TX],[8,15,TX],[9,15,TX],[10,15,TX],[11,15,OR],
+  [5,16,OR],[6,16,OR],[7,16,OR],[8,16,OR],[9,16,OR],[10,16,OR],
+  [6,17,TX],[7,17,TX],[8,17,TX],[9,17,TX],
+  [7,18,TX],[8,18,TX],
+],[1]);
+
+// SVC3: Pixel open book = style guides
+drawSprite('svc3', [
+  [8,6,TX],[9,6,TX],[10,6,TX],[11,6,TX],[12,6,TX],[13,6,TX],[14,6,TX],[15,6,PK],[16,6,TX],[17,6,TX],[18,6,TX],[19,6,TX],[20,6,TX],[21,6,TX],[22,6,TX],[23,6,TX],
+  [7,7,TX],[8,7,WH],[9,7,WH],[10,7,WH],[11,7,WH],[12,7,WH],[13,7,WH],[14,7,WH],[15,7,PK],[16,7,WH],[17,7,WH],[18,7,WH],[19,7,WH],[20,7,WH],[21,7,WH],[22,7,WH],[23,7,TX],
+  [7,8,TX],[8,8,LI],[9,8,LI],[10,8,LI],[11,8,LI],[12,8,WH],[13,8,WH],[14,8,WH],[15,8,PK],[16,8,WH],[17,8,WH],[18,8,WH],[19,8,LI],[20,8,LI],[21,8,LI],[22,8,LI],[23,8,TX],
+  [7,9,TX],[8,9,WH],[9,9,WH],[10,9,WH],[11,9,WH],[12,9,WH],[13,9,WH],[14,9,WH],[15,9,PK],[16,9,WH],[17,9,WH],[18,9,WH],[19,9,WH],[20,9,WH],[21,9,WH],[22,9,WH],[23,9,TX],
+  [7,10,TX],[8,10,LI],[9,10,LI],[10,10,LI],[11,10,WH],[12,10,WH],[13,10,WH],[14,10,WH],[15,10,PK],[16,10,WH],[17,10,WH],[18,10,WH],[19,10,WH],[20,10,LI],[21,10,LI],[22,10,LI],[23,10,TX],
+  [7,11,TX],[8,11,WH],[9,11,WH],[10,11,WH],[11,11,WH],[12,11,WH],[13,11,WH],[14,11,WH],[15,11,PK],[16,11,WH],[17,11,WH],[18,11,WH],[19,11,WH],[20,11,WH],[21,11,WH],[22,11,WH],[23,11,TX],
+  [7,12,TX],[8,12,YL],[9,12,YL],[10,12,YL],[11,12,YL],[12,12,WH],[13,12,WH],[14,12,WH],[15,12,PK],[16,12,WH],[17,12,WH],[18,12,WH],[19,12,YL],[20,12,YL],[21,12,YL],[22,12,YL],[23,12,TX],
+  [7,13,TX],[8,13,WH],[9,13,WH],[10,13,WH],[11,13,WH],[12,13,WH],[13,13,WH],[14,13,WH],[15,13,PK],[16,13,WH],[17,13,WH],[18,13,WH],[19,13,WH],[20,13,WH],[21,13,WH],[22,13,WH],[23,13,TX],
+  [6,14,TX],[7,14,TX],[8,14,TX],[9,14,TX],[10,14,TX],[11,14,TX],[12,14,TX],[13,14,TX],[14,14,TX],[15,14,PK],[16,14,TX],[17,14,TX],[18,14,TX],[19,14,TX],[20,14,TX],[21,14,TX],[22,14,TX],[23,14,TX],[24,14,TX],
+],[1]);
+
+// SVC4: Pixel speech bubble with star = dialogue/localization
+drawSprite('svc4', [
+  [10,4,TX],[11,4,TX],[12,4,TX],[13,4,TX],[14,4,TX],[15,4,TX],[16,4,TX],[17,4,TX],[18,4,TX],[19,4,TX],[20,4,TX],[21,4,TX],
+  [9,5,TX],[10,5,SK],[11,5,SK],[12,5,SK],[13,5,SK],[14,5,SK],[15,5,SK],[16,5,SK],[17,5,SK],[18,5,SK],[19,5,SK],[20,5,SK],[21,5,SK],[22,5,TX],
+  [8,6,TX],[9,6,SK],[10,6,WH],[11,6,WH],[12,6,TX],[13,6,WH],[14,6,YL],[15,6,WH],[16,6,TX],[17,6,WH],[18,6,WH],[19,6,WH],[20,6,WH],[21,6,SK],[22,6,TX],
+  [8,7,TX],[9,7,SK],[10,7,WH],[11,7,WH],[12,7,WH],[13,7,YL],[14,7,YL],[15,7,YL],[16,7,WH],[17,7,WH],[18,7,WH],[19,7,WH],[20,7,WH],[21,7,SK],[22,7,TX],
+  [8,8,TX],[9,8,SK],[10,8,WH],[11,8,TX],[12,8,YL],[13,8,YL],[14,8,WH],[15,8,YL],[16,8,YL],[17,8,TX],[18,8,WH],[19,8,WH],[20,8,WH],[21,8,SK],[22,8,TX],
+  [8,9,TX],[9,9,SK],[10,9,WH],[11,9,WH],[12,9,WH],[13,9,YL],[14,9,YL],[15,9,YL],[16,9,WH],[17,9,WH],[18,9,WH],[19,9,WH],[20,9,WH],[21,9,SK],[22,9,TX],
+  [8,10,TX],[9,10,SK],[10,10,WH],[11,10,WH],[12,10,TX],[13,10,WH],[14,10,YL],[15,10,WH],[16,10,TX],[17,10,WH],[18,10,WH],[19,10,WH],[20,10,WH],[21,10,SK],[22,10,TX],
+  [9,11,TX],[10,11,SK],[11,11,SK],[12,11,SK],[13,11,SK],[14,11,SK],[15,11,SK],[16,11,SK],[17,11,SK],[18,11,SK],[19,11,SK],[20,11,SK],[21,11,TX],
+  [10,12,TX],[11,12,TX],[12,12,TX],
+  [9,13,TX],[10,13,SK],[11,13,SK],[12,13,TX],
+  [8,14,TX],[9,14,SK],[10,14,TX],
+],[1]);
+
+// FACT sprites (16x16 tiny icons)
+// fact1: maple leaf / location pin
+drawSprite('fact1', [
+  [7,2,RD],[8,2,RD],
+  [6,3,RD],[7,3,WH],[8,3,RD],[9,3,RD],
+  [5,4,RD],[6,4,RD],[7,4,WH],[8,4,WH],[9,4,RD],[10,4,RD],
+  [4,5,RD],[5,5,WH],[6,5,WH],[7,5,WH],[8,5,WH],[9,5,WH],[10,5,RD],[11,5,RD],
+  [3,6,RD],[4,6,RD],[5,6,RD],[6,6,WH],[7,6,WH],[8,6,WH],[9,6,RD],[10,6,RD],[11,6,RD],[12,6,RD],
+  [4,7,RD],[5,7,WH],[6,7,WH],[7,7,WH],[8,7,WH],[9,7,WH],[10,7,WH],[11,7,RD],
+  [5,8,RD],[6,8,WH],[7,8,WH],[8,8,WH],[9,8,WH],[10,8,RD],
+  [6,9,RD],[7,9,WH],[8,9,WH],[9,9,RD],
+  [7,10,RD],[8,10,RD],
+  [7,11,RD],[8,11,RD],
+  [7,12,RD],[8,12,RD],
+],[1]);
+
+// fact2: pixel game controller
+drawSprite('fact2', [
+  [4,5,TX],[5,5,TX],[6,5,TX],[7,5,TX],[8,5,TX],[9,5,TX],[10,5,TX],[11,5,TX],
+  [3,6,TX],[4,6,LI],[5,6,LI],[6,6,LI],[7,6,LI],[8,6,LI],[9,6,LI],[10,6,LI],[11,6,LI],[12,6,TX],
+  [2,7,TX],[3,7,LI],[4,7,WH],[5,7,TX],[6,7,LI],[7,7,LI],[8,7,TX],[9,7,PK],[10,7,LI],[11,7,LI],[12,7,LI],[13,7,TX],
+  [2,8,TX],[3,8,LI],[4,8,TX],[5,8,TX],[6,8,TX],[7,8,LI],[8,8,TX],[9,8,TX],[10,8,TX],[11,8,LI],[12,8,LI],[13,8,TX],
+  [2,9,TX],[3,9,LI],[4,9,LI],[5,9,TX],[6,9,LI],[7,9,LI],[8,9,LI],[9,9,PK],[10,9,LI],[11,9,LI],[12,9,LI],[13,9,TX],
+  [3,10,TX],[4,10,LI],[5,10,LI],[6,10,LI],[7,10,LI],[8,10,LI],[9,10,LI],[10,10,LI],[11,10,LI],[12,10,TX],
+  [4,11,TX],[5,11,TX],[6,11,TX],[7,11,TX],[8,11,TX],[9,11,TX],[10,11,TX],[11,11,TX],
+],[1]);
+
+// fact3: pixel speech bubble = translation/language
+drawSprite('fact3', [
+  [4,3,TX],[5,3,TX],[6,3,TX],[7,3,TX],[8,3,TX],[9,3,TX],[10,3,TX],[11,3,TX],
+  [3,4,TX],[4,4,MT],[5,4,MT],[6,4,MT],[7,4,MT],[8,4,MT],[9,4,MT],[10,4,MT],[11,4,MT],[12,4,TX],
+  [3,5,TX],[4,5,MT],[5,5,TX],[6,5,TX],[7,5,TX],[8,5,TX],[9,5,TX],[10,5,MT],[11,5,MT],[12,5,TX],
+  [3,6,TX],[4,6,MT],[5,6,TX],[6,6,TX],[7,6,TX],[8,6,TX],[9,6,TX],[10,6,MT],[11,6,MT],[12,6,TX],
+  [3,7,TX],[4,7,MT],[5,7,MT],[6,7,MT],[7,7,MT],[8,7,MT],[9,7,MT],[10,7,MT],[11,7,MT],[12,7,TX],
+  [4,8,TX],[5,8,TX],[6,8,TX],[7,8,TX],[8,8,TX],[9,8,TX],[10,8,TX],[11,8,TX],
+  [4,9,TX],[5,9,MT],[6,9,MT],
+  [5,10,TX],[6,10,MT],[7,10,TX],
+],[1]);
+
+// fact4: pixel star = AHH framework/original
+drawSprite('fact4', [
+  [7,2,YL],[8,2,YL],
+  [6,3,YL],[7,3,WH],[8,3,WH],[9,3,YL],
+  [5,4,YL],[6,4,WH],[7,4,YL],[8,4,YL],[9,4,WH],[10,4,YL],
+  [2,5,YL],[3,5,YL],[4,5,YL],[5,5,YL],[6,5,YL],[7,5,WH],[8,5,WH],[9,5,YL],[10,5,YL],[11,5,YL],[12,5,YL],[13,5,YL],
+  [3,6,YL],[4,6,WH],[5,6,WH],[6,6,WH],[7,6,WH],[8,6,WH],[9,6,WH],[10,6,WH],[11,6,WH],[12,6,YL],
+  [4,7,YL],[5,7,WH],[6,7,WH],[7,7,WH],[8,7,WH],[9,7,WH],[10,7,WH],[11,7,YL],
+  [4,8,YL],[5,8,YL],[6,8,YL],[7,8,YL],[8,8,YL],[9,8,YL],[10,8,YL],[11,8,YL],
+  [3,9,YL],[4,9,WH],[5,9,YL],[6,9,YL],[7,9,YL],[8,9,YL],[9,9,YL],[10,9,WH],[11,9,YL],[12,9,YL],
+  [2,10,YL],[3,10,YL],[4,10,YL],[5,10,YL],[10,10,YL],[11,10,YL],[12,10,YL],[13,10,YL],
+  [5,11,YL],[6,11,WH],[7,11,YL],[8,11,YL],[9,11,WH],[10,11,YL],
+  [6,12,YL],[7,12,WH],[8,12,WH],[9,12,YL],
+  [7,13,YL],[8,13,YL],
+],[1]);
+
+// fact5: pixel globe = international/Korean market
+drawSprite('fact5', [
+  [6,2,TX],[7,2,TX],[8,2,TX],[9,2,TX],
+  [4,3,TX],[5,3,TX],[6,3,SK],[7,3,SK],[8,3,SK],[9,3,SK],[10,3,TX],[11,3,TX],
+  [3,4,TX],[4,4,SK],[5,4,SK],[6,4,WH],[7,4,SK],[8,4,SK],[9,4,WH],[10,4,SK],[11,4,SK],[12,4,TX],
+  [3,5,TX],[4,5,SK],[5,5,SK],[6,5,SK],[7,5,WH],[8,5,WH],[9,5,SK],[10,5,SK],[11,5,SK],[12,5,TX],
+  [2,6,TX],[3,6,SK],[4,6,SK],[5,6,SK],[6,6,SK],[7,6,SK],[8,6,SK],[9,6,SK],[10,6,SK],[11,6,SK],[12,6,SK],[13,6,TX],
+  [2,7,TX],[3,7,SK],[4,7,WH],[5,7,WH],[6,7,WH],[7,7,WH],[8,7,WH],[9,7,WH],[10,7,WH],[11,7,WH],[12,7,SK],[13,7,TX],
+  [2,8,TX],[3,8,SK],[4,8,SK],[5,8,SK],[6,8,SK],[7,8,SK],[8,8,SK],[9,8,SK],[10,8,SK],[11,8,SK],[12,8,SK],[13,8,TX],
+  [3,9,TX],[4,9,SK],[5,9,SK],[6,9,WH],[7,9,WH],[8,9,WH],[9,9,SK],[10,9,SK],[11,9,SK],[12,9,TX],
+  [3,10,TX],[4,10,SK],[5,10,SK],[6,10,SK],[7,10,WH],[8,10,SK],[9,10,SK],[10,10,SK],[11,10,SK],[12,10,TX],
+  [4,11,TX],[5,11,TX],[6,11,SK],[7,11,SK],[8,11,SK],[9,11,SK],[10,11,TX],[11,11,TX],
+  [6,12,TX],[7,12,TX],[8,12,TX],[9,12,TX],
+],[1]);
+
+// fact6: pixel envelope = quick replies
+drawSprite('fact6', [
+  [2,4,TX],[3,4,TX],[4,4,TX],[5,4,TX],[6,4,TX],[7,4,TX],[8,4,TX],[9,4,TX],[10,4,TX],[11,4,TX],[12,4,TX],[13,4,TX],
+  [2,5,TX],[3,5,PK],[4,5,PK],[5,5,TX],[6,5,PK],[7,5,PK],[8,5,PK],[9,5,TX],[10,5,PK],[11,5,PK],[12,5,PK],[13,5,TX],
+  [2,6,TX],[3,6,PK],[4,6,PK],[5,6,TX],[6,6,TX],[7,6,PK],[8,6,TX],[9,6,TX],[10,6,PK],[11,6,PK],[12,6,PK],[13,6,TX],
+  [2,7,TX],[3,7,PK],[4,7,PK],[5,7,PK],[6,7,PK],[7,7,PK],[8,7,PK],[9,7,PK],[10,7,PK],[11,7,PK],[12,7,PK],[13,7,TX],
+  [2,8,TX],[3,8,PK],[4,8,WH],[5,8,WH],[6,8,WH],[7,8,WH],[8,8,WH],[9,8,WH],[10,8,WH],[11,8,WH],[12,8,PK],[13,8,TX],
+  [2,9,TX],[3,9,PK],[4,9,WH],[5,9,YL],[6,9,WH],[7,9,WH],[8,9,WH],[9,9,YL],[10,9,WH],[11,9,WH],[12,9,PK],[13,9,TX],
+  [2,10,TX],[3,10,PK],[4,10,WH],[5,10,WH],[6,10,WH],[7,10,WH],[8,10,WH],[9,10,WH],[10,10,WH],[11,10,WH],[12,10,PK],[13,10,TX],
+  [2,11,TX],[3,11,TX],[4,11,TX],[5,11,TX],[6,11,TX],[7,11,TX],[8,11,TX],[9,11,TX],[10,11,TX],[11,11,TX],[12,11,TX],[13,11,TX],
+],[1]);
+
+// ── ACCORDION ──
+function toggleCase(summaryEl) {
+  const card = summaryEl.closest('.case-card');
+  const detail = card.querySelector('.case-detail');
+  const btn = card.querySelector('.expand-btn');
+  const isOpen = detail.classList.contains('open');
+  detail.classList.toggle('open', !isOpen);
+  btn.textContent = isOpen ? '▶ READ FULL CASE STUDY' : '▼ CLOSE CASE STUDY';
+}
+
+// ── SCROLL REVEAL ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── ACTIVE NAV ──
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 140) current = s.id; });
+  navLinks.forEach(a => {
+    const active = a.getAttribute('href') === '#' + current;
+    a.style.color = active ? 'var(--pink-deep)' : '';
+    a.style.background = active ? 'var(--pink-pale)' : '';
+    a.style.borderColor = active ? 'var(--pink)' : '';
+  });
+});
 </script>
 </body>
 </html>
