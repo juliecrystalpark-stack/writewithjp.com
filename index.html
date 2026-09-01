@@ -7,10 +7,12 @@
 <meta name="description" content="Julie Park is a freelance UX writer specializing in mobile games — onboarding flows, tutorial copy, UI strings, localization polish, and voice frameworks for game studios worldwide.">
 <meta name="keywords" content="UX writer mobile games, game UX writer freelance, mobile game onboarding writer, localization UX writer, mobile game writer, narrative writer, narrative design, content design, game content designer, Julie Park UX writer">
 <meta name="author" content="Julie Park">
+<link rel="canonical" href="https://writewithjp.com/">
 <meta property="og:title" content="Write With JP — UX Writer for Mobile Games">
 <meta property="og:description" content="Julie Park writes onboarding, tutorials, UI microcopy, and localization-ready English for mobile game studios.">
 <meta property="og:url" content="https://writewithjp.com">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://writewithjp.com/og-image.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Write With JP — UX Writer for Mobile Games">
 <meta name="twitter:description" content="Julie Park writes onboarding, tutorials, UI microcopy, and localization-ready English for mobile game studios.">
@@ -275,6 +277,9 @@ footer p { font-size: 12px; color: var(--muted); }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 700px) {
+  nav { padding: 16px 18px; align-items: flex-start; }
+  .nav-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+  .nav-links a { font-size: 10px; }
   .services-list { grid-template-columns: 1fr; }
   .service-row:nth-child(odd) { padding-right: 0; border-right: none; }
   .service-row:nth-child(even) { padding-left: 0; }
@@ -283,6 +288,18 @@ footer p { font-size: 12px; color: var(--muted); }
   .framework-grid { grid-template-columns: 1fr 1fr; }
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Julie Park",
+  "url": "https://writewithjp.com/",
+  "jobTitle": "UX Writer for Mobile Games",
+  "email": "mailto:julie.crystal.park@gmail.com",
+  "knowsAbout": ["UX writing", "mobile game onboarding", "game UI microcopy", "localization editing", "voice and tone systems"]
+}
+</script>
 </head>
 <body>
 
@@ -301,7 +318,7 @@ footer p { font-size: 12px; color: var(--muted); }
   <div class="hero-inner">
     <div class="eyebrow">UX Writer</div>
     <h1>The first <span class="accent">60 seconds</span> make or break your game.</h1>
-    <p class="hero-sub">I'm Julie — I write onboarding, tutorials, UI microcopy, and localization-ready English for mobile game studios. Copy that helps players understand your game fast, and reads like it was never translated.</p>
+    <p class="hero-sub">I'm Julie — I help mobile game studios turn complex mechanics and translated English into clear, player-ready experiences. From onboarding and tutorials to UI microcopy and voice systems, I write copy that feels born in the market — not localized into it.</p>
     <p class="hero-note">Background in UX writing, content design, and voice &amp; tone systems — open to contract and full-time roles too.</p>
     <div class="btn-row">
       <a href="work.html" class="btn btn-primary">View Work</a>
