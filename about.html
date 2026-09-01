@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Julie Park | Write With JP</title>
+<meta name="description" content="Julie Park is a Canadian freelance UX writer specializing in mobile games, with a background in benefits analysis and plain-language writing.">
+<meta name="keywords" content="Julie Park UX writer, mobile game UX writer, freelance UX writer Canada">
+<meta name="author" content="Julie Park">
+<link rel="canonical" href="https://writewithjp.com/about.html">
+<meta property="og:title" content="About — Julie Park | Write With JP">
+<meta property="og:description" content="Canadian freelance UX writer specializing in mobile games — background in plain-language writing.">
+<meta property="og:url" content="https://writewithjp.com/about.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://writewithjp.com/og-image.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="About — Julie Park | Write With JP">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --ink: #1a1a1a;
+  --line: #d8d8d8;
+  --line-strong: #1a1a1a;
+  --muted: #6b6b6b;
+  --accent: #ff5c5c;
+  --bg: #fafafa;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.container { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250,250,250,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  padding: 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: var(--ink);
+}
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-links a.active { border-bottom-color: var(--accent); }
+
+.page-header {
+  padding: 80px 32px 60px;
+  border-bottom: 1px solid var(--line);
+}
+.page-header-inner { max-width: 900px; margin: 0 auto; }
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+.page-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(32px, 4.5vw, 48px);
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.page-sub { font-size: 16px; color: var(--muted); max-width: 560px; }
+
+section { padding: 70px 32px; border-bottom: 1px solid var(--line); }
+
+.about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; }
+.about-text p { font-size: 15.5px; color: var(--muted); line-height: 1.95; margin-bottom: 18px; }
+.about-text strong { color: var(--ink); font-weight: 600; }
+
+.fact-list { border-top: 1px solid var(--line-strong); }
+.fact-item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13.5px;
+  color: var(--muted);
+  display: flex;
+  gap: 12px;
+}
+.fact-item span.label { color: var(--ink); font-weight: 600; min-width: 90px; flex-shrink: 0; }
+
+.cta-row { padding: 60px 32px; text-align: center; border-bottom: none; }
+.cta-row .btn {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 14px 26px;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: white;
+  transition: all 0.15s;
+}
+.cta-row .btn:hover { background: var(--accent); border-color: var(--accent); }
+
+footer { padding: 32px; text-align: center; }
+footer p { font-size: 12px; color: var(--muted); }
+
+@media (max-width: 700px) {
+  nav { padding: 16px 18px; align-items: flex-start; }
+  .nav-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+  .nav-links a { font-size: 10px; }
+  .about-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">write / with / jp</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="eyebrow">About</div>
+    <h1 class="page-title">Hi, I'm Julie.</h1>
+    <p class="page-sub">A Canadian freelance UX writer specializing in mobile games.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I write for studios who need <strong>English copy that sounds like it was born in the market</strong> — not localized into it. That's the whole value proposition, and it's a narrower lane than "UX writer" on purpose.</p>
+        <p>Before this, I worked as a Benefits Analyst — translating dense policy language into something a person could actually understand and act on. That's most of what UX writing for games is too: taking something complicated (a mechanic, a mission condition, a payment flow) and saying it in a way that doesn't require a second read.</p>
+        <p>I care about players feeling capable, not confused — and about copy that respects a studio's brand voice instead of overriding it with a generic house style.</p>
+        <p>Currently open to project-based freelance work and full-time roles with teams who take their words seriously.</p>
+      </div>
+      <div class="fact-list">
+        <div class="fact-item"><span class="label">Based in</span> Canada, remote-friendly</div>
+        <div class="fact-item"><span class="label">Focus</span> Indie & Asian studios targeting Western markets</div>
+        <div class="fact-item"><span class="label">Background</span> Benefits Analyst → UX Writer</div>
+        <div class="fact-item"><span class="label">Response</span> Within 48 hours</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-row">
+  <a href="contact.html" class="btn">Get in Touch</a>
+</div>
+
+<footer>
+  <p>© 2026 Write With JP · Julie Park · UX Writer for Mobile Games</p>
+</footer>
+
+</body>
+</html>
