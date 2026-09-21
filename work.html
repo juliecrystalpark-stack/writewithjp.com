@@ -170,11 +170,7 @@ section { padding: 60px 32px; border-bottom: 1px solid var(--line); }
 .case-compact-header {
   padding: 22px 28px;
   border-bottom: 1px solid var(--line);
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: block;
 }
 .case-compact-header h4 {
   font-family: 'Space Grotesk', sans-serif;
@@ -229,14 +225,13 @@ footer p { font-size: 12px; color: var(--muted); }
   <div class="page-header-inner">
     <div class="eyebrow">Case Studies</div>
     <h1 class="page-title">Work</h1>
-    <p class="page-sub">Real client work solving the moments that lose players: unclear first sessions, easy-to-ignore notifications, confusing missions, inconsistent terminology, and character voices that do not hold together.</p>
-    <p class="page-sub" style="margin-top: 16px; font-size: 13.5px; padding-left: 14px; border-left: 2px solid var(--line);">These case studies feature anonymized client work. Product names, proprietary visuals, and confidential data have been removed, while the challenges, decisions, and contributions remain true to the work.</p>
+    <p class="page-sub">These case studies feature anonymized client work. Product names, proprietary visuals, and confidential data have been removed, while the challenges, decisions, and contributions remain true to the work.</p>
   </div>
 </div>
 
 <div class="pain-intro">
   <div class="container">
-    <p class="section-sub" style="margin-bottom: 0; max-width: 640px;">Players should not have to decode the game before they can enjoy it. These are the production problems I help teams solve:</p>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; line-height: 1.35; margin-bottom: 0; max-width: 700px;">Players should not have to decode the game before they can enjoy it.</h2>
     <div class="pain-grid">
       <div class="pain-item">
         <h5>Tutorial Drop-Off</h5>
@@ -269,21 +264,18 @@ footer p { font-size: 12px; color: var(--muted); }
       </div>
       <div class="case-body">
         <div class="case-block">
-          <p class="case-block-label">The Problem</p>
-          <p>The client had dozens of promotional events, each with a title translated individually into English. On paper, each translation was accurate. In practice, none of it worked — players scanning a promotions screen couldn't tell a VIP-exclusive offer from a weekend bonus from a deposit reward, because every title was worded like a one-off, even when the underlying event type repeated constantly.</p>
+          <p><strong>Problem:</strong> The client had dozens of promotional events, each with a title translated individually into English. On paper, each translation was accurate. In practice, none of it worked — players scanning a promotions screen couldn't tell a VIP-exclusive offer from a weekend bonus from a deposit reward, because every title was worded like a one-off, even when the underlying event type repeated constantly.</p>
         </div>
         <div class="case-block">
-          <p class="case-block-label">How I Approached It</p>
-          <p>I looked at it the way a player actually would: fast, scanning, deciding in half a second whether something's worth tapping. Nobody reads a promo screen top to bottom — they scan for a pattern that tells them what kind of thing they're looking at. If the first few words don't instantly communicate the event type, the player's already lost interest.</p>
+          <p><strong>How I approached it:</strong> I looked at it the way a player actually would: fast, scanning, deciding in half a second whether something's worth tapping. Nobody reads a promo screen top to bottom — they scan for a pattern that tells them what kind of thing they're looking at. If the first few words don't instantly communicate the event type, the player's already lost interest.</p>
           <p>So instead of translating title by title, I built a small, fixed set of category labels — VIP Only, Time-Limited, Exclusive Offer, and a few others — mapped to the <em>type</em> of event underneath the wording, not the literal source phrase. Every VIP-only offer read as VIP Only, every time, regardless of how creative the original title got. Once a player learns what a label means once, they never have to re-learn it.</p>
           <p>Along the way I also caught something the client hadn't flagged: one recurring reward was tied to a payment method that only exists in one region. Kept as-is, it would've shipped to a Western audience referencing something they couldn't use. I flagged it, and we swapped it for something market-agnostic before it went live.</p>
         </div>
         <div class="case-block">
-          <p class="case-block-label">The Result</p>
-          <p class="muted">The result was a more consistent promotional taxonomy designed to reduce recognition effort for players. Because the labels were built around event type rather than one-off phrasing, the team also gained a reusable system for future promotions instead of solving the same naming problem every time.</p>
+          <p class="muted"><strong>Result:</strong> The result was a more consistent promotional taxonomy designed to reduce recognition effort for players. Because the labels were built around event type rather than one-off phrasing, the team also gained a reusable system for future promotions instead of solving the same naming problem every time.</p>
         </div>
       </div>
-      <div class="case-footer-note">Additional sanitized process details are available where confidentiality permits.</div>
+      <div class="case-footer-note">This work is covered by an NDA. Additional sanitized process details are available where confidentiality permits.</div>
     </div>
 
     <!-- Case 2 -->
