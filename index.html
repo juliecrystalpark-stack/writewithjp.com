@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Write With JP — UX Writer for Mobile Games</title>
-<meta name="description" content="Julie Park is a freelance UX writer specializing in mobile games — onboarding flows, tutorial copy, UI strings, localization polish, and voice frameworks for game studios worldwide.">
-<meta name="keywords" content="UX writer mobile games, game UX writer freelance, mobile game onboarding writer, localization UX writer, mobile game writer, narrative writer, narrative design, content design, game content designer, Julie Park UX writer">
+<title>Mobile Game UX Writer & Narrative Writer | Julie Park</title>
+<meta name="description" content="Julie Park is a mobile game UX writer and narrative writer specializing in onboarding, tutorials, UI microcopy, localization, voice systems, and character development.">
 <meta name="author" content="Julie Park">
 <link rel="canonical" href="https://writewithjp.com/">
-<meta property="og:title" content="Write With JP — UX Writer for Mobile Games">
+<meta property="og:title" content="Mobile Game UX Writer & Narrative Writer | Julie Park">
 <meta property="og:description" content="Julie Park writes onboarding, tutorials, UI microcopy, and localization-ready English for mobile game studios.">
 <meta property="og:url" content="https://writewithjp.com">
 <meta property="og:type" content="website">
@@ -163,6 +162,30 @@ section { padding: 80px 32px; border-bottom: 1px solid var(--line); }
   margin-bottom: 48px;
 }
 
+/* ── PROBLEM RECOGNITION ── */
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line-strong);
+  border-left: 1px solid var(--line-strong);
+}
+.problem-card {
+  padding: 26px;
+  border-right: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+  color: var(--ink);
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.15s;
+}
+.problem-card:hover { background: var(--white); }
+.problem-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+.problem-card p { color: var(--muted); font-size: 13.5px; }
+
 /* ── SERVICES ── */
 .services-list {
   display: grid;
@@ -279,6 +302,7 @@ footer p { font-size: 12px; color: var(--muted); }
   nav { padding: 16px 18px; align-items: flex-start; }
   .nav-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
   .nav-links a { font-size: 10px; }
+  .problem-grid { grid-template-columns: 1fr; }
   .services-list { grid-template-columns: 1fr; }
   .service-row:nth-child(odd) { padding-right: 0; border-right: none; }
   .service-row:nth-child(even) { padding-left: 0; }
@@ -317,7 +341,7 @@ footer p { font-size: 12px; color: var(--muted); }
   <div class="hero-inner">
     <div class="eyebrow">UX Writer</div>
     <h1>The first <span class="accent">60 seconds</span> make or break your game.</h1>
-    <p class="hero-sub">I'm Julie — I help mobile game studios turn complex mechanics and translated English into clear, player-ready experiences. From onboarding and tutorials to UI microcopy and voice systems, I write copy that reads real good — not localized into it.</p>
+    <p class="hero-sub">I'm Julie — I help mobile game studios turn complex mechanics and translated English into clear, player-ready experiences. From onboarding and tutorials to UI microcopy and voice systems, I write copy that feels natural—not like a translation.</p>
     <p class="hero-note">Background in UX writing, content design, and voice &amp; tone systems — open to contract and full-time roles too.</p>
     <div class="btn-row">
       <a href="work.html" class="btn btn-primary">View Work</a>
@@ -326,10 +350,45 @@ footer p { font-size: 12px; color: var(--muted); }
   </div>
 </section>
 
+<!-- PROBLEMS -->
+<section id="problems">
+  <div class="container">
+    <p class="section-num">01 — Does this sound familiar?</p>
+    <h2 class="section-title">The words might be the problem.</h2>
+    <p class="section-sub">You do not need to know whether you need UX writing, localization, or a voice system. Start with what is confusing players—or slowing down your team.</p>
+    <div class="problem-grid">
+      <a class="problem-card" href="services.html#onboarding">
+        <h3>Players keep asking what to do.</h3>
+        <p>The mechanic works, but the tutorial, mission, or interface is not making the next step clear.</p>
+      </a>
+      <a class="problem-card" href="services.html#localization">
+        <h3>The English is correct—but feels off.</h3>
+        <p>The meaning survived translation, but the rhythm, tone, or cultural context did not.</p>
+      </a>
+      <a class="problem-card" href="services.html#voice">
+        <h3>Every notification sounds urgent.</h3>
+        <p>Routine reminders and real deadlines compete for attention until players stop noticing both.</p>
+      </a>
+      <a class="problem-card" href="services.html#onboarding">
+        <h3>The team understands it. Players do not.</h3>
+        <p>Internal specifications reached the interface without being translated into player language.</p>
+      </a>
+      <a class="problem-card" href="services.html#voice">
+        <h3>The terminology keeps changing.</h3>
+        <p>Features, rewards, and actions are named differently across screens, writers, or updates.</p>
+      </a>
+      <a class="problem-card" href="services.html#characters">
+        <h3>The character has a bio—but no pulse.</h3>
+        <p>The backstory exists, yet the dialogue and behaviour still do not sound like a real person.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES -->
 <section id="services">
   <div class="container">
-    <p class="section-num">01 — Services</p>
+    <p class="section-num">02 — Services</p>
     <h2 class="section-title">What I do</h2>
     <p class="section-sub">From first tap to thousandth notification — copy that keeps players oriented and moving forward.</p>
     <div class="services-list">
@@ -367,7 +426,7 @@ footer p { font-size: 12px; color: var(--muted); }
 <!-- EXPLORE -->
 <section style="border-bottom: none;">
   <div class="container">
-    <p class="section-num">02 — Explore</p>
+    <p class="section-num">03 — Explore</p>
     <h2 class="section-title">Where to next</h2>
     <div class="link-cards">
       <a href="work.html" class="link-card">
@@ -389,7 +448,7 @@ footer p { font-size: 12px; color: var(--muted); }
 <!-- FRAMEWORKS -->
 <section>
   <div class="container">
-    <p class="section-num">03 — Frameworks</p>
+    <p class="section-num">04 — Frameworks</p>
     <h2 class="section-title">How I think about copy</h2>
     <p class="section-sub">Two original frameworks I bring to every project — one for onboarding, one for error states.</p>
 
@@ -453,7 +512,7 @@ footer p { font-size: 12px; color: var(--muted); }
 <!-- FINAL CTA -->
 <section class="final-cta">
   <div class="container">
-    <p class="section-num" style="display:flex; justify-content:center;">04 — Let's Talk</p>
+    <p class="section-num" style="display:flex; justify-content:center;">05 — Let's Talk</p>
     <h2 class="section-title">Not sure what kind of writing support you need?</h2>
     <p class="section-sub">Tell me where players are getting confused—or where your team keeps getting stuck. We can talk through the problem and see whether I’m the right fit.</p>
     <div class="btn-row" style="justify-content:center;">
